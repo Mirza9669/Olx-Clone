@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    each form in forms
+        .row 
+                .col-lg-8 
+                    img(src='../iphone.png', alt="")
+                .col-lg-4
+                    .row
+                        .col-lg-12
+                            .card.mt-lg-5(href= "", style='')
+                                .card-body
+                                    h3.card-title Rs 35,500
+                                    p.card-text
+                                        h5 Iphone pro max 
+                                    p.card-text Allama iqbal
+                                    //- p.card-text     
+                                    //-     a(href="/details/"+form._id, class='btn btn-primary btn-sm') View Ad 
+                    .row
+                        .col-lg-12
+                            .card.mt-3(href= "", style='')
+                                .card-body
+                                    h3.card-title Rs 35,500
+                                    p.card-text
+                                        h5 Iphone pro max 
+                                    p.card-text Allama iqbal
+                                    //- p.card-text     
+                                    //-     a(href="/details/"+form._id, class='btn btn-primary btn-sm') View Ad  
+
+        .row 
+        div.col-lg-8(style="border:1px solid lightgray") 
+            h5.pt-4 Details
+            p Brand
+            p Price 
+            hr
+            h5.pt-4 Description 
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis numquam vitae laudantium, dignissimos ipsa, magnam fugiat nesciunt possimus doloremque veritatis deserunt, officiis nam magni quam asperiores blanditiis aspernatur minus labore!

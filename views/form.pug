@@ -1,0 +1,90 @@
+extends layout
+
+
+block content
+    h2(class='text-center') Post Your Ad
+    
+    form(style='border:1px solid darkgray' action='/forms', method='post' enctype="multipart/form-data")
+        <div style='border-bottom:1px solid darkgray'>
+            <div class="form-group px-4">
+            h4(class='pt-4') Category
+            <label for="category">Category</label>
+            select(class="form-select col-lg-4 col-sm-12 mt-2" id="category",aria-label="Default select example" name="category")
+                option(selected="") Select a Category
+                <option value="Mobile">Mobile</option>
+                <option value="Cars">Cars</option>
+                <option value="Motorcycle">Motorcycle</option>
+                <option value="Plots">Plots</option>
+                <option value="Tablets">Tablets</option>
+            </select>
+            </div>
+        </div>
+
+        <div style='border-bottom:1px solid darkgray'>
+            <div class="form-group px-4">
+            h4(class='pt-4') INCLUDE SOME DETAILS
+            <label for="title">Ad title</label>
+            input(type="text"  class="form-control" name='title' style='border:1px solid black' id="title")
+            </div>
+            <div class="form-group px-4">
+            <label for="description">Description</label>
+            textarea(type="text" rows='7' class="form-control" name="desc"  style='border:1px solid black;' id="description")
+            </div>
+            <div class="form-group px-4">
+            <label for="brnad">Brand</label>
+            input(type="text"  class="form-control" name="brand" style='border:1px solid black' id="brand")
+            </div>
+        </div>
+        
+        <div style='border-bottom:1px solid darkgray'>    
+            <div class="form-group px-4">
+            h4(class='pt-4') SET A PRICE
+            <label for="price">Price</label>
+            input(type="text"  class="form-control" name="price" style='border:1px solid black' id="price")
+            </div>
+        </div>
+
+        <div style='border-bottom:1px solid darkgray'>
+            <div class="form-group px-4">
+            h4(class='pt-4') YOUR AD'S LOCATION 
+            <label for="location">Location</label>
+            <select class="form-select col-lg-4 col-sm-12 mt-2" id="region" aria-label="Default select example" name="location">
+                option(selected="") Select a Location
+                <option value="Punjab">Punjab</option>
+                <option value="KPK">KPK</option>
+                <option value="Sindh">Sindh</option>
+                <option value="Balochistan">Balochistan</option>
+                <option value="Gilgit Baltistan">Gilgit Baltistan</option>
+                <option value="Azad Kashmir">Azad Kashmir</option>
+                <option value="Hazara Region">Hazara Region</option>
+            </select>
+            </div>
+        </div>
+
+        <div style='border-bottom:1px solid darkgray'>
+            <div class="form-group px-4">
+            h4(class='pt-4') UPLOAD AN IMAGE 
+            <label for="name">Image Title</label>
+            input(type="file" id="image" value=''  name="image" required)
+            </div>
+        </div>    
+        
+        <div style='border-bottom:1px solid darkgray'>
+            <div class='form-group px-4'>
+            h4(class='pt-4') YOUR DETAILS 
+            <label for="userName">Name</label>
+            input(type="text" class="form-control" value=user.name name="name" style='border:1px solid black' id="userName")
+            </div>
+            <div class='form-group px-4'> 
+            <label for="number">Phone Number</label>
+            input(type="text"  class="form-control" name="number" style='border:1px solid black' id="number")
+            </div>
+        </div>
+
+        <div style='border-bottom:1px solid darkgray'>
+            <div class='form-group p-4'>
+            <button type='submit' class='btn btn-lg btn-dark'>Submit</button>
+            </div>
+        </div>
+
+    </form>

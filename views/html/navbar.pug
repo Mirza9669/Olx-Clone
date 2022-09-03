@@ -1,0 +1,57 @@
+nav(class="navbar navbar-inverse navbar-expand-lg navbar-light bg-light ")
+    a(class="navbar-brand",href="/")
+        img(class="img-fluid", style="width:50px", src="../images/olx.png")
+    form(class="form-inline", method='post', action='/')
+        input(type="search", style="width:400px" ,class="form-control", name='search', placeholder="Find Cars, Mobile phones and more")
+        button(class="btn btn-primary",type='submit') Search
+
+    button(class="navbar-toggler", type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false",aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse", id="navbarSupportedContent")
+        .dropdown
+            button(class="btn btn-secondary dropdown-toggle", type="button", id="dropdownMenu5", data-toggle="dropdown", aria-haspopup="true",aria-expanded="false") Location
+            .dropdown-menu 
+                a(class="dropdown-item", href="/") All ads in Pakistan 
+                .dropdown-divider 
+                a(class="dropdown-item", href="/punjab") Punjab 
+                a(class="dropdown-item", href="/sindh") Sindh
+                a(class="dropdown-item", href="/balochistan") Balochistan 
+                a(class="dropdown-item", href="/kpk") KPK 
+                a(class="dropdown-item", href="/gb") Gilgit Baltistan
+                a(class="dropdown-item", href="/hazara") Hazara Region 
+                a(class="dropdown-item", href="/kashmir") Azad Kashmir 
+
+        ul(class="nav navbar-nav ml-auto w-100 justify-content-end")
+            if user
+
+                <li class="nav-item">
+                <a class="nav-link" href="/myads">Your Ads</a>
+                </li> 
+                <li class="nav-item">
+                <a class="nav-link" href="/users/logout">Logout</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/forms">Sell</a>
+                </li>
+
+            if !user
+                <li class="nav-item">
+                <a class="nav-link" href="/users/login">Login</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/users/signup">Register</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/forms">Sell</a>
+                </li>
+            
+
+
+div(class="d-flex flex-row justify-content-center collapse navbar-collapse", id="navbarSupportedContent")
+        a(class="col-lg-2", href="/mobiles", style="color:black") Mobile Phones
+        a(class="col-lg-2", href="/cars", style="color:black") Cars
+        a(class="col-lg-2", href="/motorcycles", style="color:black") Motorcycles
+        a(class="col-lg-2", href="/plots", style="color:black") Plots
+        a(class="col-lg-2", href="/tablets", style="color:black") Tablets            
+
+        

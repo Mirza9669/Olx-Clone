@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h1 Login 
+  form(action="/users/login",method='post') 
+        .form-group
+            label(for="name") Email 
+            input(type="text",class="form-control", name='email', value="muddasarhussain126@gmail.com")
+  
+        .form-group
+            label(for="password") Password 
+            input(type="password",class="form-control", name='password', value="9669")
+        input(type="submit" class="btn btn-info", value="Login")
+        <br>
+        <a href='/users/register'>No Account? register</a>

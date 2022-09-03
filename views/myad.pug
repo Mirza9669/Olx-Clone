@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1
+    each form in forms
+        .card.mb-3(href= "", style='')
+            .row
+                .col-lg-4.col-md-4
+                    img.card-img(src=form.image, height="250")
+                .col-lg-4.col-md-8.p-5
+                    .card-body
+                        h5.card-title= form.title
+                        p.card-text
+                            h3=form.price
+                        p.card-text= form.location
+                        p.card-text     
+                            a(href="/"+form._id, class='btn btn-primary mx-2 btn-sm') View Ad
+                            a(href="/myads/"+form._id,class='btn mx-2 btn-sm btn-danger') Delete 
+                            a(href="/forms/"+form._id, class='btn btn-success mx-2 btn-sm') Update Ad 

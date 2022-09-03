@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h1 Signup 
+  form(action="/users/signup",method='post') 
+        .form-group
+            label(for="name") Name 
+            input(type="text",class="form-control", name='name', value="Mudassar Hussain")
+        .form-group
+            label(for="email") Email 
+            input(type="text",class="form-control", name='email', value="muddasarhussain126@gmail.com")
+  
+        .form-group
+            label(for="password") Password 
+            input(type="password",class="form-control", name='password', value="9669")
+        input(type="submit" class="btn btn-info", value="Signup")
+        <br>
+        
